@@ -8,8 +8,7 @@ Introduction:
 
 Flow:
 
-
-	User initializes the ImageLoader component. Then user can pass-in required Image URL, required ImageView and optional priority value to IL. IL initializes the thread pool and initiates a download task. At the same time IL also keeps track of the tasks on the thread pool. Remote images are
+  User initializes the ImageLoader component. Then user can pass-in required Image URL, required ImageView and optional priority value to IL. IL initializes the thread pool and initiates a download task. At the same time IL also keeps track of the tasks on the thread pool. Remote images are
 being downloaded as image bitmaps by the task. These bitmaps are then handed over to the main thread for being loaded in the ImageViews. Same bitmaps are also handed over to a different pool of threads to be saved to filesystem. IL supervises each of these tasks and keeps track of the status of every request. 
 
 Features:
