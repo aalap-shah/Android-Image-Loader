@@ -1,15 +1,20 @@
 Android-Image-Loader
 ====================
 
-Image Loader 
-Introduction
+Introduction:
+
+
   ImageLoader is a simple, fast, optimized and efficient java component to load remote Images. ImageLoader component (abbreviated as IL here on) loads remote image URLs into Android ImageViews. IL handles multiple parallel remote URL requests asynchronously using a pool of threads, which is optimized for connection reuse. IL supports priority oriented loading of images by internally managing three level priority queue. It provides a callback mechanism to enable user to get notified about the state of the download. It utilizes in-memory caching of bitmap of images for better UE experience. It also supports filesystem based caching for efficiency. 
 
-Flow 
+Flow:
+
+
 	User initializes the ImageLoader component. Then user can pass-in required Image URL, required ImageView and optional priority value to IL. IL initializes the thread pool and initiates a download task. At the same time IL also keeps track of the tasks on the thread pool. Remote images are
 being downloaded as image bitmaps by the task. These bitmaps are then handed over to the main thread for being loaded in the ImageViews. Same bitmaps are also handed over to a different pool of threads to be saved to filesystem. IL supervises each of these tasks and keeps track of the status of every request. 
 
-Features
+Features:
+
+
 1) IL handles multiple parallel remote URL requests asynchronously using a pool of threads, which is optimized for connection reuse. This pool of threads is basically configurable pool of Android AsyncTasks. Each task handles one request at a time. If number of parallel requests are more than the configured pool size then those requests are queued. And the AsyncTasks are re-used without re-spwaning new ones. The default pool size is set at 5.
 
 2) Downloaded image bitmaps are handed over to main thread, where main thread takes care of loading the bitmaps into their respective Android ImageViews or it notifies the user application by means of registered callbacks.
