@@ -39,3 +39,7 @@ Features:
 13) IL class is a java singleton class, hence there is only 1 instance of the IL across entire application. And therefore IL's internal cache is also shared across all the activities of an application.
 
 14) IL associates timestamp with every image request. This helps in controlling requests with different ImageURLs but same ImageView. The most recent timestamp associated request remains valid and IL always loads the most recent Image request into the ImageView irrespective of Image download time. 
+
+
+- great thanks to
+   Sachin Gole (svgole@gmail.com)
